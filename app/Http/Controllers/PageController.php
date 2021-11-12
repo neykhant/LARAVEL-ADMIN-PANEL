@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PageController extends Controller
 {
@@ -21,6 +22,20 @@ class PageController extends Controller
     public function store(Request $request)
     {
         $category = new Category();
+
+        // $profile_img_name = $category->profile_img;
+        // if ($request->hasFile('profile_img')) {
+        //     Storage::disk('public')->delete('employee/' . $category->profile_img);
+
+        //     $profile_img_file = $request->file('profile_img');
+        //     $profile_img_name = uniqid() . '_' . time() . '.' . $profile_img_file->getClientOriginalExtension();
+        //     Storage::disk('public')->put('employee/' . $profile_img_name, file_get_contents($profile_img_file));
+        // }
+
+        if($request->hasFile('profile_img')){
+            
+        }
+
         $category->Name = $request->name;
         $category->Publish = $request->checkbox ? 'Yes' : 'No';
         $category->save();

@@ -14,6 +14,7 @@
     <title>
         @yield('title')
     </title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
     <link href="{{ asset('category/css/main.css') }}" rel="stylesheet" />
 </head>
@@ -71,8 +72,7 @@
                                             <button type="button" tabindex="0" class="dropdown-item">
                                                 User Account
                                             </button>
-                                            <a tabindex="0" class="dropdown-item" href="{{ route('logout') }}"
-                                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                            <a tabindex="0" class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                                 Logout
                                             </a>
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -135,7 +135,7 @@
                             <li>
                                 <a href="{{route('home') }}" class="mm-active">
                                     <i class="metismenu-icon pe-7s-rocket"></i>
-                                    Categorys
+                                    Category
                                 </a>
                             </li>
                             <!--  -->
@@ -174,7 +174,9 @@
             <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
         </div>
     </div>
+    
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="{{ asset('category/js/main.js') }} "></script>
+    @yield('script')
 </body>
-
 </html>

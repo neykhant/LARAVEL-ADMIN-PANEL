@@ -1,5 +1,5 @@
 @extends('layouts.app_plain')
-@section('title', 'Categorys')
+@section('title', 'Category')
 @section('content')
 <div class="app-page-title">
     <div class="page-title-wrapper">
@@ -10,9 +10,7 @@
             <div>
                 Category
             </div>
-
         </div>
-
     </div>
 </div>
 <div style="padding: 6px 0;">
